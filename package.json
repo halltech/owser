@@ -12,5 +12,17 @@
   "bugs": {
     "url": "https://github.com/ideacave/owser/issues"
   },
-  "homepage": "https://github.com/ideacave/owser#readme"
+  "scripts": {
+    "electron": "electron . ",
+    "less": "lessc src/less/main.less dist/style/main.css",
+    "start": "npm run less && npm run electron"
+  },
+  "homepage": "https://github.com/ideacave/owser#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "pump": "^1.0.2"
+  }
 }

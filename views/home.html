@@ -1,67 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Document</title>
+	<title>owser</title>
 
-    <link rel="stylesheet" href="../src/css/master.css">
-  </head>
-  <body>
-    <!-- Window title bar -->
-    <div id="window-title-bar">
-      <!-- WIndow title -->
-      <div id="window-title-bar-title">owser</div>
+	<link rel="stylesheet" href="../dist/style/normalize.css">
+	<link rel="stylesheet" href="../dist/style/main.css">
+</head>
+<body>
+	<header id="controls">
+		<div class="control-item" id="window-move">
+			::
+		</div>
+		<div class="control-item" id="window-navigate">
+			<
+		</div>
+		<div class="control-item" id="window-url">halltechnologies.co</div>
+		<div class="control-item" id="window-tabs">
+			<div class="tab">a</div>
+			<div class="tab">b</div>
+		</div>
+		<div class="control-item" id="title-bar-controls">
+			<button id="window-action-minimize">-</button>
+			<button id="window-action-maximize">+</button>
+			<button id="window-action-close">X</button>
+		</div>
+	</header>
 
-      <!-- Window controls -->
-      <div id="window-title-bar-controls">
-        <button id="window-action-minimize">-</button>
-        <button id="window-action-maximize">+</button>
-        <button id="window-action-close">X</button>
-      </div>
-    </div>
-  </body>
+	<div id="container">
+		a
+	</div>
+</body>
 
-  <script>
-  (function () {
-    // Load BrowserWindow from electron
-    const {BrowserWindow} = require('electron').remote
 
-    // Initialize function
-    function init() {
-      // Minimize window
-      document.getElementById('window-action-minimize').addEventListener('click', function(e) {
-        var window = BrowserWindow.getFocusedWindow()
 
-        window.minimize()
-      })
+<!-- all ui scripts -->
+<script src="../src/js/ui_manager.js"></script>
 
-      // Toogle FullSCreen
-      document.getElementById('window-action-maximize').addEventListener('click', function(e) {
-        var window = BrowserWindow.getFocusedWindow();
 
-        if(window.isMaximized()){
-            window.unmaximize();
-        } else {
-            window.maximize();
-        }
-      })
-
-      // CLose Window
-      document.getElementById('window-action-close').addEventListener('click', function(e) {
-        var window = BrowserWindow.getFocusedWindow();
-        window.close();
-      })
-    }
-
-    // Initialize if window is ready
-    document.onreadystatechange =  () => {
-      if (document.readyState == "complete") {
-        init();
-      }
-    };
-  })();
-  </script>
 </html>

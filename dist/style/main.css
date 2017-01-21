@@ -1,0 +1,120 @@
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+button {
+  background: transparent;
+  border: none;
+}
+button:focus {
+  outline: none;
+}
+button.action {
+  height: auto;
+  border-radius: 3px;
+  border: 1px solid #bdbdbd;
+  background: #f5f5f5;
+}
+.full-height {
+  height: 100%;
+}
+.full-width {
+  width: 100%;
+}
+.full {
+  width: 100%;
+  height: 100%;
+}
+.flex {
+  display: flex;
+}
+.fl-center {
+  justify-content: center;
+  align-items: center;
+}
+.fl-space {
+  justify-content: space-around;
+}
+.fl-fill {
+  justify-content: space-around;
+  align-items: stretch;
+}
+.fl-strech {
+  align-items: stretch;
+}
+.fl-wide {
+  width: 100%;
+}
+.column {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+.fl-2 {
+  flex-grow: 2;
+  flex-shrink: 2;
+}
+.fl-3 {
+  flex-grow: 2;
+  flex-shrink: 2;
+}
+.fl-4 {
+  flex-grow: 2;
+  flex-shrink: 2;
+}
+.fl-5 {
+  flex-grow: 2;
+  flex-shrink: 2;
+}
+#container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-top: 40px;
+}
+header#controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  line-height: 40px;
+  background: #fafafa;
+}
+header#controls .control-item {
+  height: 100%;
+  line-height: 40px;
+}
+#window-move {
+  -webkit-app-region: drag;
+  width: 40px;
+  flex-basis: 40px;
+  text-align: center;
+}
+#window-navigate {
+  width: 100px;
+  flex-basis: 100px;
+}
+#window-url {
+  width: auto;
+  flex-grow: 2;
+}
+#window-tabs {
+  min-width: 150px;
+  flex-basis: 150px;
+  display: flex;
+}
+#window-tabs .tab {
+  min-width: 100px;
+}
+#title-bar-controls {
+  -webkit-app-region: no-drag;
+}
