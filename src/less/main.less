@@ -17,7 +17,8 @@ header#controls {
 	height: @header-height;
 	line-height: @header-height;
 
-	background: @clr-grey-50;
+	background: @clr-grey-100;
+	border-bottom: 1px solid @clr-grey-400;
 
 
 	.control-item {
@@ -54,4 +55,21 @@ header#controls {
 
 #title-bar-controls {
 	-webkit-app-region: no-drag;
+}
+
+
+
+footer#status {
+	.full-width;
+	.flex;
+	justify-content: space-between;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+
+	height: @footer-height;
+	background: @clr-grey-100;
+	border-top: 1px solid @clr-grey-300;
+	line-height: @footer-height;
+
 }
